@@ -1,6 +1,6 @@
 // @flow
 import { createStackNavigator } from 'react-navigation'
-import HomeScreen from 'src/components/screens/home/home'
+import HomeScreen from 'src/components/screens/home'
 
 const Navigation = createStackNavigator(
   {

@@ -1,8 +1,13 @@
+// @flow
 import { combineReducers } from 'redux'
-import auth from 'src/redux/modules/auth'
+import ui, { type State as UIState } from 'src/redux/modules/ui'
+
+export type State = {|
+  ui: UIState,
+|}
 
 const rootReducer = combineReducers({
-  auth,
+  ui,
 })
 
 export default rootReducer

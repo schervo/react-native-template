@@ -1,7 +1,14 @@
-// @flow
 import React from 'react'
-import AppNavigation from 'src/navigation'
+import { Provider } from 'react-redux'
+import AppNavigator from './navigation'
+import configureStore from './redux/store'
 
-export default function App() {
-  return <AppNavigation />
+function App() {
+  return (
+    <Provider store={configureStore}>
+      <AppNavigator />
+    </Provider>
+  )
 }
+
+export default App
