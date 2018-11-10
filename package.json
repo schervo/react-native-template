@@ -4,16 +4,39 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint src",
+    "pretty": "prettier --semi false --print-width 100 --single-quote --trailing-comma all --write \"src/**/*.js\"",
+    "precommit": "lint-staged && npm run test",
+    "flow": "flow",
+    "flow-stop": "flow stop"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm pretty",
+      "git add"
+    ]
   },
   "dependencies": {
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.57.4"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "flow-bin": "^0.78.0",
+    "husky": "^1.1.3",
     "jest": "23.6.0",
+    "lint-staged": "^8.0.4",
     "metro-react-native-babel-preset": "0.49.0",
+    "prettier": "^1.15.1",
     "react-test-renderer": "16.6.0-alpha.8af6728"
   },
   "jest": {
