@@ -2,7 +2,7 @@
 import { combineReducers } from 'redux'
 import ui, { type State as UIState } from 'src/redux/modules/ui'
 
-export type State = {|
+export type RootReducerState = {|
   ui: UIState,
 |}
 

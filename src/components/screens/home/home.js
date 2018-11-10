@@ -7,13 +7,14 @@ import styles from './styles'
 type Props = ReduxProps & {}
 
 export default function Home(props: Props) {
-  const { switchTextColor, textColor } = props
+  const { fetchUsers, textColor } = props
 
   return (
     <View style={styles.container}>
       <Button
         title="Change color"
-        onPress={() => switchTextColor(textColor === 'red' ? 'blue' : 'red')}
+        // onPress={() => switchTextColor(textColor === 'red' ? 'blue' : 'red')}
+        onPress={() => fetchUsers()}
       />
       <Text
         style={{

@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for helpers/api/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">helpers/api</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">36.62% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>26/71</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">15.79% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>6/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">9.09% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/33</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.81% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>22/47</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Dependencies:
+import Axios from 'axios'
+import {
+  mapValues,
+  mapKeys,
+  isObject,
+  isArray,
+  camelCase,
+} from 'lodash'
+import env from 'src/config/env'
+import { getAuthToken } from '../auth'
+&nbsp;
+&nbsp;
+export type APIResponseType&lt;T&gt; = {
+  statusCode: number,
+  data: T
+};
+&nbsp;
+export type APIResponse = APIResponseType&lt;Object&gt;;
+&nbsp;
+export type APIError = string;
+&nbsp;
+&nbsp;
+const getClient = () =&gt; g<span class="fstat-no" title="function not covered" >etAuthToke</span>n()<span class="cstat-no" title="statement not covered" >.then((token) =&gt; {<span class="fstat-no" title="function not covered" ></span></span>
+  // Defaults
+  const config = <span class="cstat-no" title="statement not covered" >{</span>
+    baseURL: env.API_URL,
+    timeout: 15000,
+    headers: {
+      Authorization: (token) ? `Bearer ${token}` : undefined,
+      'Content-Type': 'application/json',
+    },
+  }
+&nbsp;
+  re<span class="cstat-no" title="statement not covered" >turn Axios.create(config)</span>
+})
+&nbsp;
+const parseError = (error)<span class="fstat-no" title="function not covered" > =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  if (error &amp;&amp; error.response) {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      statusCode: error.response.status,
+      data: error.response.data,
+      error: true,
+    }
+  }
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    data: {
+      error: 'Network Error',
+      message: 'Network Error',
+      statusCode: 500,
+    },
+    error: true,
+    statusCode: 500,
+  }
+}
+&nbsp;
+const parseResponse = respons<span class="fstat-no" title="function not covered" >e =&gt; ({<span class="cstat-no" title="statement not covered" ></span></span>
+  statusCode: response.status,
+  data: response.data,
+})
+&nbsp;
+&nbsp;
+// GET request factory
+export const get = <span class="fstat-no" title="function not covered" >(end</span>point, opts) =&gt; g<span class="cstat-no" title="statement not covered" >etClient()</span>
+  .then<span class="fstat-no" title="function not covered" >(p</span>roduct =&gt; product.<span class="cstat-no" title="statement not covered" >get(endpoint, opts)</span>
+    .then<span class="fstat-no" title="function not covered" >(r</span>esponse =&gt; parseRes<span class="cstat-no" title="statement not covered" >ponse(response))</span>
+    .catch<span class="fstat-no" title="function not covered" >(e</span>rror =&gt; Promise.<span class="cstat-no" title="statement not covered" >reject(parseError(error))))</span>
+&nbsp;
+// POST request factory
+export const post = <span class="fstat-no" title="function not covered" >(endp</span>oint, body = {}, opts)<span class="cstat-no" title="statement not covered" > =&gt; getClient()<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+  .then<span class="fstat-no" title="function not covered" >(c</span>lient =&gt; client.p<span class="cstat-no" title="statement not covered" >ost(endpoint, body, opts)</span>
+    .then<span class="fstat-no" title="function not covered" >(r</span>esponse =&gt; parseRes<span class="cstat-no" title="statement not covered" >ponse(response))</span>
+    .catch<span class="fstat-no" title="function not covered" >(e</span>rror =&gt; Promise.<span class="cstat-no" title="statement not covered" >reject(parseError(error))))</span>
+&nbsp;
+&nbsp;
+// PATCH request factory
+export const patch = <span class="fstat-no" title="function not covered" >(endpo</span>int, data = {}, opts) <span class="cstat-no" title="statement not covered" >=&gt; getClient()<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+  .then<span class="fstat-no" title="function not covered" >(c</span>lient =&gt; client.p<span class="cstat-no" title="statement not covered" >atch(endpoint, data, opts)</span>
+    .then<span class="fstat-no" title="function not covered" >(r</span>esponse =&gt; parseRes<span class="cstat-no" title="statement not covered" >ponse(response))</span>
+    .catch<span class="fstat-no" title="function not covered" >(e</span>rror =&gt; Promise.<span class="cstat-no" title="statement not covered" >reject(parseError(error))))</span>
+&nbsp;
+&nbsp;
+// PUT request factory
+export const put = <span class="fstat-no" title="function not covered" >(end</span>point, data = {}, opts<span class="cstat-no" title="statement not covered" >) =&gt; getClient()<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+  .then<span class="fstat-no" title="function not covered" >(c</span>lient =&gt; client.p<span class="cstat-no" title="statement not covered" >ut(endpoint, data, opts)</span>
+    .then<span class="fstat-no" title="function not covered" >(r</span>esponse =&gt; parseRes<span class="cstat-no" title="statement not covered" >ponse(response))</span>
+    .catch<span class="fstat-no" title="function not covered" >(e</span>rror =&gt; Promise.<span class="cstat-no" title="statement not covered" >reject(parseError(error))))</span>
+&nbsp;
+&nbsp;
+// DELETE request factory
+export const del = <span class="fstat-no" title="function not covered" >(end</span>point, opts) =&gt; g<span class="cstat-no" title="statement not covered" >etClient()</span>
+  .then<span class="fstat-no" title="function not covered" >(c</span>lient =&gt; client.d<span class="cstat-no" title="statement not covered" >elete(endpoint, opts)</span>
+    .then<span class="fstat-no" title="function not covered" >(r</span>esponse =&gt; parseRes<span class="cstat-no" title="statement not covered" >ponse(response))</span>
+    .catch<span class="fstat-no" title="function not covered" >(e</span>rror =&gt; Promise.<span class="cstat-no" title="statement not covered" >reject(parseError(error))))</span>
+&nbsp;
+&nbsp;
+export const mock = (
+  data: Object,
+  delay: number = 500,<span class="branch-1 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ></span></span>
+): Promise&lt;APIResponse&gt; =&gt; new Promise(resolve =&gt; setTimeout(
+  () =<span class="fstat-no" title="function not covered" >&gt; </span>resolve(<span class="cstat-no" title="statement not covered" ></span>
+    parseResponse({
+      status: 200,
+      statusText: 'Success',
+      text: () =&gt; Promise<span class="fstat-no" title="function not covered" >.reso</span>lve<span class="cstat-no" title="statement not covered" >(JSON.stringify(data)),</span>
+      url: '',
+      ok: true,
+      json: () =&gt; Promise<span class="fstat-no" title="function not covered" >.reso</span>lve<span class="cstat-no" title="statement not covered" >(data),</span>
+      headers: {},
+    }),
+  ),
+  delay,
+))
+&nbsp;
+/**
+ * Recursively convert object keys to camelCase.
+ */
+export fu<span class="fstat-no" title="function not covered" >nction ca</span>melize(obj: Object) {
+<span class="cstat-no" title="statement not covered" >  if (typeof obj === 'string') <span class="cstat-no" title="statement not covered" >return obj</span></span>
+<span class="cstat-no" title="statement not covered" >  return mapValues(mapKeys(obj, (_, k) =&gt; camelCase(k)), (<span class="fstat-no" title="function not covered" >va</span>l) =&gt; {<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span>
+<span class="cstat-no" title="statement not covered" >    if (isArray(val)) {</span>
+<span class="cstat-no" title="statement not covered" >      return val.map(camelize)</span>
+    }<span class="cstat-no" title="statement not covered" > if (isObject(val)) {</span>
+<span class="cstat-no" title="statement not covered" >      return camelize(val)</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return val</span>
+  })
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Nov 10 2018 17:05:40 GMT-0300 (-03)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,6 +1,5 @@
 // @flow
-import { createStore } from 'redux'
-import rootReducer from 'src/redux/modules'
+import createStore from 'src/redux/store'
 
 import { switchTextColor } from '../actions'
 
@@ -8,7 +7,7 @@ describe('Home Screen', () => {
   let store
 
   beforeEach(() => {
-    store = createStore(rootReducer)
+    store = createStore
   })
 
   test('Change text color', () => {
