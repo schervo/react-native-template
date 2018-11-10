@@ -9,24 +9,29 @@
     "pretty": "prettier --semi false --print-width 100 --single-quote --trailing-comma all --write \"src/**/*.js\"",
     "precommit": "lint-staged && npm run test",
     "flow": "flow",
-    "flow-stop": "flow stop"
+    "flow-stop": "flow stop",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android"
   },
   "lint-staged": {
     "*.js": [
-      "npm pretty",
+      "npm run pretty",
       "git add"
     ]
   },
   "dependencies": {
     "react": "16.6.0-alpha.8af6728",
-    "react-native": "0.57.4"
+    "react-native": "0.57.4",
+    "react-navigation": "^2.18.2"
   },
   "devDependencies": {
+    "@babel/preset-flow": "^7.0.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
-    "babel-preset-flow": "^6.23.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-import-resolver-reactnative": "^1.0.2",
     "eslint-plugin-flowtype": "^3.2.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
